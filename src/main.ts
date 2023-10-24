@@ -1,21 +1,20 @@
-import AuthPlugin from '@/plugins/auth.plugin'
-import { createPinia } from 'pinia'
 import { createApp } from 'vue'
-
+import { createPinia } from 'pinia'
 import App from './App.vue'
 import router from './router'
 
+import AuthPlugin from '@/plugins/auth.plugin'
 import './index.css'
 
 const app = createApp(App)
 
-// registering pinia plugin
+// Registering Pinia plugin
 app.use(createPinia())
 
-// registering router plugin
+// Registering Router plugin
 app.use(router)
 
-// authentication plugin
+// Authentication plugin
 app.use(AuthPlugin)
 
 app.mount('#app')
